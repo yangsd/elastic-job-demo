@@ -1,6 +1,5 @@
 package com.elasticjob.task;
 
-import com.SpringBootStart;
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
 import org.slf4j.Logger;
@@ -12,9 +11,9 @@ import java.util.Date;
  * @author sdyang
  * @create 2018-01-06 16:08
  **/
-public class MyTask implements SimpleJob {
+public class MySimpleTask implements SimpleJob {
 
-    private static Logger logger = LoggerFactory.getLogger(MyTask.class);
+    private static Logger logger = LoggerFactory.getLogger(MySimpleTask.class);
 
     @Override
     public void execute(ShardingContext context) {

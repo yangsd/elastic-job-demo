@@ -8,7 +8,7 @@ import com.dangdang.ddframe.job.lite.api.JobScheduler;
 import com.dangdang.ddframe.job.lite.config.LiteJobConfiguration;
 import com.dangdang.ddframe.job.lite.spring.api.SpringJobScheduler;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
-import com.elasticjob.task.MyTask;
+import com.elasticjob.task.MySimpleTask;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -31,7 +31,7 @@ public class SimpleJobConfig {
 
     @Bean
     public SimpleJob simpleJob() {
-        return new MyTask();
+        return new MySimpleTask();
     }
 
     @Bean(initMethod = "init")
